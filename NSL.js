@@ -1,39 +1,39 @@
 $(document).ready(function(){
 
 /***menu league title and additional links********************************************************************************************/
-$( "a.navbar-brand" ).text( "OMFL" );
-$("div#dlmaddenmenu ul.navbar-nav ").append('<a href="http://www.daddyleagues.com/OMFL/admin/sync_week" class="btn btn-info ajax" role="button" data-method="post" data-disabled="true" data-loader=".ajax-loader-roster" data-html=".rosterresults">  <img class="ajax-loader-roster" style="display:none" alt="Sending ..." src="/img/ajax-loader.gif"> <em class="icon-wrench"></em></a>');
+$( "a.navbar-brand" ).text( "NSL" );
+$("div#dlmaddenmenu ul.navbar-nav ").append('<a href="http://www.daddyleagues.com/NSL/admin/sync_week" class="btn btn-info ajax" role="button" data-method="post" data-disabled="true" data-loader=".ajax-loader-roster" data-html=".rosterresults">  <img class="ajax-loader-roster" style="display:none" alt="Sending ..." src="/img/ajax-loader.gif"> <em class="icon-wrench"></em></a>');
 
 /***scoreboard**********************/
- $( "div#flip2").load( "/OMFL/schedules div#scores" );
+ $( "div#flip2").load( "/NSL/schedules div#scores" );
  $('div#flip2').attr('class', 'simple-ticker');
 $('.simple-ticker').attr('id', 'js-ticker-fade');
     $("div#js-ticker-fade").hide();
     $("#flip").on("click", function(){
         $("div#js-ticker-fade").fadeToggle('slow');
     });
- $( "div#flip" ).load( "/OMFL/admin .col-xl-6:nth-child(1) .card.text-center.card-default .card-body h4.card-title" );
- $( "div#mem").load( "/OMFL/admin ul.navbar-nav.flex-row.mr-3 " );
+ $( "div#flip" ).load( "/NSL/admin .col-xl-6:nth-child(1) .card.text-center.card-default .card-body h4.card-title" );
+ $( "div#mem").load( "/NSL/admin ul.navbar-nav.flex-row.mr-3 " );
 
 /*league leaders home page********/
-$( ".passingleaders" ).load( "/OMFL/stats/player/passing  .col-xl-10" );
-$( ".rushingleaders" ).load( "/OMFL/stats/player/rushing .col-xl-10" );
-$( ".receivingleaders" ).load( "/OMFL/stats/player/receiving .col-xl-10" );
-$( ".sacksleaders" ).load( "/OMFL/stats/player/defense?sortby=sack  .col-xl-10" );
-$( ".tacklesleaders" ).load( "/OMFL/stats/player/defense?sortby=tackles .col-xl-10" );
-$( ".interceptionsleaders" ).load( "/OMFL/stats/player/defense?sortby=int .col-xl-10" );
+$( ".passingleaders" ).load( "/NSL/stats/player/passing  .col-xl-10" );
+$( ".rushingleaders" ).load( "/NSL/stats/player/rushing .col-xl-10" );
+$( ".receivingleaders" ).load( "/NSL/stats/player/receiving .col-xl-10" );
+$( ".sacksleaders" ).load( "/NSL/stats/player/defense?sortby=sack  .col-xl-10" );
+$( ".tacklesleaders" ).load( "/NSL/stats/player/defense?sortby=tackles .col-xl-10" );
+$( ".interceptionsleaders" ).load( "/NSL/stats/player/defense?sortby=int .col-xl-10" );
 
 /*standings tabs*******************************************************/
- $( ".afc.standings").load( "/OMFL/standings .card.card-default:nth-child(4)" );
- $( ".nfc.standings").load( "/OMFL/standings .card.card-default:nth-child(5)" );
+ $( ".afc.standings").load( "/NSL/standings .card.card-default:nth-child(4)" );
+ $( ".nfc.standings").load( "/NSL/standings .card.card-default:nth-child(5)" );
 
 /*All Teams Page**********************************************************/
-if(window.location.href=== "http://www.daddyleagues.com/OMFL/teams") {
+if(window.location.href=== "http://www.daddyleagues.com/NSL/teams") {
          $(".col-xl-10").addClass("teams");
      }
 
 /*Standings Page*********************************************************/
-if(window.location.href=== "/OMFL/standings") {
+if(window.location.href=== "/NSL/standings") {
          $(" .table-responsive").addClass("table-responsive-page");
      }
 
