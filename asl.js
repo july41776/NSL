@@ -2,7 +2,6 @@ $(document).ready(function(){
 
 /***menu league title and additional links********************************************************************************************/
 $( "a.navbar-brand" ).text( "American Simball Lg" );
-$("div#dlmaddenmenu ul.navbar-nav ").append('<a href="http://www.daddyleagues.com/ASL/admin/sync_week" class="btn btn-info ajax" role="button" data-method="post" data-disabled="true" data-loader=".ajax-loader-roster" data-html=".rosterresults">  <img class="ajax-loader-roster" style="display:none" alt="Sending ..." src="/img/ajax-loader.gif"> <em class="icon-wrench"></em></a>');
 
 /***scoreboard**********************/
  $( "div#flip2").load( "/ASL/schedules div#scores" );
